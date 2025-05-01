@@ -1,6 +1,8 @@
 from sys import version_info
 from typing import NamedTuple
 from logging import getLogger
+from typing import NamedTuple, Optional
+from typing import List, Dict, Optional
 
 logger = getLogger('temp')
 # Check for python3.6 or newer to resolve erroneous typing.NamedTuple issues
