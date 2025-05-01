@@ -270,6 +270,7 @@ class SonarrEpisode(NamedTuple):
     sceneSeasonNumber: int = None
     series: SonarrTVShow = None
     tvdbId: int = None
+    lastSearchTime: Optional[str] = None  # ✅ Add this line
 
 
 class SonarrQueue(NamedTuple):
@@ -298,47 +299,48 @@ class SonarrQueue(NamedTuple):
 
 
 # Radarr
-class RadarrMovie(NamedTuple):
-    added: str = None
-    alternateTitles: list = None
-    certification: str = None
-    cleanTitle: str = None
-    collection: dict = None
-    digitalRelease: str = None
-    folderName: str = None
-    genres: list = None
-    hasFile: bool = None
-    id: int = None
-    images: list = None
-    imdbId: str = None
-    inCinemas: str = None
-    isAvailable: bool = None
-    minimumAvailability: str = None
-    monitored: bool = None
-    movieFile: dict = None
-    originalTitle: str = None
-    overview: str = None
-    path: str = None
-    physicalRelease: str = None
-    qualityProfileId: int = None
-    ratings: dict = None
-    runtime: int = None
-    secondaryYear: int = None
-    secondaryYearSourceId: int = None
-    sizeOnDisk: float = None
-    sortTitle: str = None
-    status: str = None
-    studio: str = None
-    tags: list = None
-    titleSlug: str = None
-    tmdbId: int = None
-    website: str = None
-    year: int = None
-    youTubeTrailerId: str = None
-    title: str = None
-    originalLanguage: str = None
-    addOptions: str = None
-    popularity: str = None
+class RadarrMovie:
+    added: Optional[str] = None
+    alternateTitles: Optional[List] = None
+    certification: Optional[str] = None
+    cleanTitle: Optional[str] = None
+    collection: Optional[Dict] = None
+    digitalRelease: Optional[str] = None
+    folderName: Optional[str] = None
+    genres: Optional[List[str]] = None
+    hasFile: Optional[bool] = None
+    id: Optional[int] = None
+    images: Optional[List] = None
+    imdbId: Optional[str] = None
+    inCinemas: Optional[str] = None
+    isAvailable: Optional[bool] = None
+    minimumAvailability: Optional[str] = None
+    monitored: Optional[bool] = None
+    movieFile: Optional[Dict] = None
+    originalTitle: Optional[str] = None
+    overview: Optional[str] = None
+    path: Optional[str] = None
+    physicalRelease: Optional[str] = None
+    qualityProfileId: Optional[int] = None
+    ratings: Optional[Dict] = None
+    runtime: Optional[int] = None
+    secondaryYear: Optional[int] = None
+    secondaryYearSourceId: Optional[int] = None
+    sizeOnDisk: Optional[float] = None
+    sortTitle: Optional[str] = None
+    status: Optional[str] = None
+    studio: Optional[str] = None
+    tags: Optional[List] = None
+    titleSlug: Optional[str] = None
+    tmdbId: Optional[int] = None
+    website: Optional[str] = None
+    year: Optional[int] = None
+    youTubeTrailerId: Optional[str] = None
+    title: Optional[str] = None
+    originalLanguage: Optional[str] = None
+    addOptions: Optional[str] = None
+    popularity: Optional[str] = None
+    releaseDate: Optional[str] = None  # ✅ This was missing
 
 
 # Radarr Queue
