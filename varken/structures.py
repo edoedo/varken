@@ -342,7 +342,12 @@ class RadarrMovie(NamedTuple):
     popularity: str = None
     releaseDate: str = None
     movieFileId: int = None
-
+    rootFolderPath: str = None  # Added based on the data
+    statistics: dict = None  # Added based on the data
+    quality: dict = None  # Added based on the movie file data
+    indexerFlags: int = None  # Added based on the movie file data
+    mediaInfo: dict = None  # Added based on the movie file data
+    qualityCutoffNotMet: bool = None  # Added based on the movie file data
 
 
 
