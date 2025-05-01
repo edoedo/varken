@@ -301,6 +301,7 @@ class SonarrQueue(NamedTuple):
 
 
 # Radarr
+@dataclass
 class RadarrMovie:
     added: Optional[str] = None
     alternateTitles: Optional[List] = field(default_factory=list)
