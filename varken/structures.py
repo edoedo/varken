@@ -341,6 +341,7 @@ class RadarrMovie(NamedTuple):
     addOptions: str = None
     popularity: str = None
     releaseDate: str = None
+    movieFileId: int = None
 
 
 
