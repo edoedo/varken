@@ -348,6 +348,7 @@ class RadarrMovie(NamedTuple):
     indexerFlags: int = None  # Added based on the movie file data
     mediaInfo: dict = None  # Added based on the movie file data
     qualityCutoffNotMet: bool = None  # Added based on the movie file data
+    lastSearchTime: str = None  # Added the missing field
 
 
 
