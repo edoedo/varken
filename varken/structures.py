@@ -270,6 +270,7 @@ class SonarrEpisode(NamedTuple):
     sceneSeasonNumber: int = None
     series: SonarrTVShow = None
     tvdbId: int = None
+    lastSearchTime: str = None
     
 
 
