@@ -1,8 +1,8 @@
 from sys import version_info
 from typing import NamedTuple
 from logging import getLogger
-from typing import NamedTuple, Optional
-from typing import List, Dict, Optional
+from dataclasses import dataclass, field
+from typing import Optional, List, Dict
 
 logger = getLogger('temp')
 # Check for python3.6 or newer to resolve erroneous typing.NamedTuple issues
@@ -303,28 +303,28 @@ class SonarrQueue(NamedTuple):
 # Radarr
 class RadarrMovie:
     added: Optional[str] = None
-    alternateTitles: Optional[List] = None
+    alternateTitles: Optional[List] = field(default_factory=list)
     certification: Optional[str] = None
     cleanTitle: Optional[str] = None
-    collection: Optional[Dict] = None
+    collection: Optional[Dict] = field(default_factory=dict)
     digitalRelease: Optional[str] = None
     folderName: Optional[str] = None
-    genres: Optional[List[str]] = None
+    genres: Optional[List[str]] = field(default_factory=list)
     hasFile: Optional[bool] = None
     id: Optional[int] = None
-    images: Optional[List] = None
+    images: Optional[List] = field(default_factory=list)
     imdbId: Optional[str] = None
     inCinemas: Optional[str] = None
     isAvailable: Optional[bool] = None
     minimumAvailability: Optional[str] = None
     monitored: Optional[bool] = None
-    movieFile: Optional[Dict] = None
+    movieFile: Optional[Dict] = field(default_factory=dict)
     originalTitle: Optional[str] = None
     overview: Optional[str] = None
     path: Optional[str] = None
     physicalRelease: Optional[str] = None
     qualityProfileId: Optional[int] = None
-    ratings: Optional[Dict] = None
+    ratings: Optional[Dict] = field(default_factory=dict)
     runtime: Optional[int] = None
     secondaryYear: Optional[int] = None
     secondaryYearSourceId: Optional[int] = None
@@ -332,7 +332,7 @@ class RadarrMovie:
     sortTitle: Optional[str] = None
     status: Optional[str] = None
     studio: Optional[str] = None
-    tags: Optional[List] = None
+    tags: Optional[List] = field(default_factory=list)
     titleSlug: Optional[str] = None
     tmdbId: Optional[int] = None
     website: Optional[str] = None
@@ -342,7 +342,8 @@ class RadarrMovie:
     originalLanguage: Optional[str] = None
     addOptions: Optional[str] = None
     popularity: Optional[str] = None
-    releaseDate: Optional[str] = None  # ✅ This was missing
+    releaseDate: Optional[str] = None
+
 
 
 # Radarr Queue
