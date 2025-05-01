@@ -270,6 +270,7 @@ class SonarrEpisode(NamedTuple):
     sceneSeasonNumber: int = None
     series: SonarrTVShow = None
     tvdbId: int = None
+    
 
 
 class SonarrQueue(NamedTuple):
@@ -339,6 +340,7 @@ class RadarrMovie(NamedTuple):
     originalLanguage: str = None
     addOptions: str = None
     popularity: str = None
+    releaseDate: str = None
 
 
 
